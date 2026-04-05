@@ -44,52 +44,6 @@ Mummys-Kitchen-Stuttgart/
 └── README.md           # Project overview & documentation
 ```
 
----
-
-## 🚀 How to Run Locally
-
-1. **Clone the repository**
-
-```bash
-git clone https://github.com/<your-username>/mummys-kitchen-stuttgart.git
-```
-
-2. **Navigate into the folder**
-
-```bash
-cd mummys-kitchen-stuttgart
-```
-
-3. **Open the website in your browser**
-
-```bash
-open index.html   # macOS
-# or
-start index.html  # Windows
-```
-
----
-
-## 🎨 Customization
-
-* Replace `hero` background and `gallery-item` gradients with actual food images
-* Update **menu packages** and **pricing** in `index.html`
-* Modify color scheme in `style.css` for branding alignment
-
----
-
-## 📬 Contact / Booking Form
-
-* Uses plain JavaScript to simulate submission
-* For production, integrate with a backend/email service for real bookings
-
----
-
-## 📌 License
-
-This project is licensed under the **MIT License** – feel free to use, modify, and distribute.
-
----
 
 ## 🔗 Live Demo
 
@@ -97,7 +51,7 @@ This project is licensed under the **MIT License** – feel free to use, modify,
 
 ---
 
-**Designed & Developed by Rev. Kefas Etiku Francis**
+**Designed & Developed by Kefas Etiku Francis**
 Luxury catering web experience | Food-first premium presentation
 
 ---
