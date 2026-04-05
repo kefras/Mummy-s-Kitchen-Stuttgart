@@ -4,8 +4,6 @@
 
 Welcome to the **Mummy’s Kitchen Stuttgart** luxury catering website project – a **premium dark luxury website** built to showcase authentic Nigerian cuisine, European dishes, and upscale catering services for weddings, corporate events, and family celebrations.
 
-This project transforms a flyer-style branding concept into a fully interactive, modern, mobile-responsive website.
-
 ---
 
 ## 🌟 Features
