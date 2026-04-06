@@ -71,20 +71,18 @@ if (slider) {
 }
 
 
-// Mobile Menu Logic
 const menuToggle = document.querySelector(".menu-toggle");
-const navLinks = document.querySelector(".nav-links");
+const navContainer = document.querySelector(".nav-container");
 
 menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-    // Optional: Change ☰ to X when open
-    menuToggle.innerHTML = navLinks.classList.contains("active") ? "✕" : "☰";
+  navContainer.classList.toggle("active");
+  menuToggle.textContent =
+    navContainer.classList.contains("active") ? "✕" : "☰";
 });
 
-// Close menu when a link is clicked (so it doesn't block the screen)
 document.querySelectorAll(".nav-links a").forEach(link => {
-    link.addEventListener("click", () => {
-        navLinks.classList.remove("active");
-        menuToggle.innerHTML = "☰";
-    });
+  link.addEventListener("click", () => {
+    navContainer.classList.remove("active");
+    menuToggle.textContent = "☰";
+  });
 });

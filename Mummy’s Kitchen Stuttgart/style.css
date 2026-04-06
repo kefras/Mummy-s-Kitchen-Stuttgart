@@ -10,8 +10,6 @@
 
 }
 
-
-
 body {
 
   background: #0c0c0c;
@@ -20,36 +18,61 @@ body {
 
 }
 
-
-
 html {
 
   scroll-behavior: smooth;
 
 }
 
-
-
+/* NAVBAR */
 .navbar {
-
   position: fixed;
-
   width: 100%;
-
   top: 0;
-
-  padding: 20px 60px;
-
-  background: rgba(0,0,0,0.8);
-
+  padding: 18px 50px;
+  background: rgba(0, 0, 0, 0.88);
   display: flex;
-
   justify-content: space-between;
-
+  align-items: center;
   z-index: 1000;
-
+  backdrop-filter: blur(8px);
 }
 
+.logo {
+  color: #ffb84d;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.nav-container {
+  display: flex;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ffb84d;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #ffb84d;
+  cursor: pointer;
+}
 
 
 .logo {
@@ -414,8 +437,6 @@ html {
 
 }
 
-
-
 .faq-item {
 
   max-width: 700px;
@@ -555,7 +576,31 @@ footer {
 }
 
 
+.dish-card {
+  background: #1a1a1a;
+  border-radius: 18px;
+  overflow: hidden;
+  text-align: center;
+  border: 1px solid rgba(255, 184, 77, 0.3);
+  transition: 0.3s;
+}
 
+.dish-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(255, 122, 0, 0.2);
+}
+
+.dish-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.dish-card h3 {
+  padding: 15px;
+  color: #ffcc00;
+  font-size: 1.1rem;
+}
 
 
 .dish-grid {
@@ -700,111 +745,43 @@ footer {
 
 }
 
+@media (max-width: 992px) {
+  .menu-toggle {
+    display: block;
+    z-index: 1100;
+  }
 
+  .nav-container {
+    position: fixed;
+    top: 70px;
+    right: -100%;
+    width: 280px;
+    height: calc(100vh - 70px);
+    background: #111;
+    transition: right 0.4s ease;
+    z-index: 1000;
+    padding-top: 40px;
+    box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+  }
 
+  .nav-container.active {
+    right: 0;
+  }
 
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 30px;
+    gap: 25px;
+  }
 
-@media (max-width: 768px) {
-    /* Navbar Adjustment */
-    .navbar {
-        padding: 15px 20px;
-        flex-direction: row; /* Keep logo and hamburger on same line */
-        align-items: center;
-    }
+  .nav-links li {
+    width: 100%;
+  }
 
-    /* Hide menu by default off-screen */
-    .nav-links {
-        position: fixed;
-        top: 70px; /* Right under the navbar */
-        left: -100%; /* Hidden to the left */
-        flex-direction: column;
-        background: rgba(0, 0, 0, 0.95);
-        width: 100%;
-        height: 100vh;
-        text-align: center;
-        transition: 0.3s;
-        gap: 30px;
-        padding-top: 50px;
-    }
-
-    /* Show menu when 'active' class is added via JS */
-    .nav-links.active {
-        left: 0;
-    }
-
-    /* Show the hamburger icon */
-    .menu-toggle {
-        display: block;
-        font-size: 30px;
-        color: #ffb84d;
-        cursor: pointer;
-    }
-
-    /* Hero Text Scaling */
-    .hero h1 {
-        font-size: 2.5rem;
-        padding: 0 10px;
-    }
-
-    .hero p {
-        font-size: 1.1rem;
-    }
-
-    .slides img {
-        height: 300px;
-    }
+  .nav-links a {
+    font-size: 1.1rem;
+    display: block;
+    width: 100%;
+  }
 }
-
-/* Add this to your general CSS to hide hamburger on desktop */
-.menu-toggle {
-    display: none;
-}
-
-
-
-@media (max-width: 768px) {
-
-    /* ... previous header code ... */
-
-
-
-    .hero-content h1 {
-
-        font-size: 2.2rem; /* Scales down the massive heading */
-
-        line-height: 1.2;
-
-    }
-
-
-
-    .hero-content p {
-
-        font-size: 1rem;
-
-        margin-bottom: 20px;
-
-    }
-
-
-
-    .hero-btn {
-
-        padding: 12px 24px;
-
-        font-size: 1rem;
-
-    }
-
-   
-
-    /* Ensure the slideshow height reduces for mobile */
-
-    .slides img {
-
-        height: 300px;
-
-    }
-
-}
-
